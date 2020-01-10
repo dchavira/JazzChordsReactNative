@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View,Button,Alert } from 'react-native';
-
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
+import * as firebase from 'firebase';
+try{
+  // Initialize Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCm1TfUeYqSh-FNmQsCelX4vEup3vHpHao",
+      authDomain: "jazz-chords-react.firebaseapp.com",
+      databaseURL: "https://jazz-chords-react.firebaseio.com",
+      projectId: "jazz-chords-react",
+      storageBucket: "jazz-chords-react.appspot.com"
+  };
+  firebase.initializeApp(firebaseConfig);
+}
+catch (err) {
+  // we skip the “already exists” message which is
+  // not an actual error when we’re hot-reloading
+  if (!/already exists/.test(err.message)) {
+  console.error("Firebase initialization error raised", err.stack)
+  }
+}
+const firebaseApp= firebase;
+var ref=firebase.database().ref();
+ref.on("value",function(snapshot){
+  const scale=snapshot.val();
+},function(error){
+  console.error("error: ",error.stack)
 });
 
+
 export default class App extends Component {
+  
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Button
+      {//<Text style={styles.instructions}>{scale}</Text>
+      }<Button
           onPress={() => {
             alert('You tapped the button!');
           }}

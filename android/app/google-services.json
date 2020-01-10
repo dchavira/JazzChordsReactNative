@@ -1,71 +1,34 @@
 {
   "project_info": {
-    "project_number": "928565337154",
-    "firebase_url": "https://jazz-chords-data.firebaseio.com",
-    "project_id": "jazz-chords-data",
-    "storage_bucket": "jazz-chords-data.appspot.com"
+    "project_number": "678729044194",
+    "firebase_url": "https://jazz-chords-react.firebaseio.com",
+    "project_id": "jazz-chords-react",
+    "storage_bucket": "jazz-chords-react.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:928565337154:android:cd6a0d225e867b4294e1db",
-        "android_client_info": {
-          "package_name": "com.example.jazz_chords_2019"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "928565337154-jrju40jgvffcrtq5a8go7t2ctavot66e.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.jazz_chords_2019",
-            "certificate_hash": "7bf3ae6879ad8ad82cb050d016e562ff063e43fc"
-          }
-        },
-        {
-          "client_id": "928565337154-iftre65neet97b497hdc5tvt08un8ed3.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAaKyJov-BOOYKzQjaVR9AGrpZeIuvqjzE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "928565337154-iftre65neet97b497hdc5tvt08un8ed3.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:928565337154:android:c424f839c618b26c94e1db",
+        "mobilesdk_app_id": "1:678729044194:android:e3f71f60f0d2ebd8844ebb",
         "android_client_info": {
           "package_name": "com.jazzchords"
         }
       },
       "oauth_client": [
         {
-          "client_id": "928565337154-iftre65neet97b497hdc5tvt08un8ed3.apps.googleusercontent.com",
+          "client_id": "678729044194-ovqm0o764ki1ms27oroc668phj4cgtee.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAaKyJov-BOOYKzQjaVR9AGrpZeIuvqjzE"
+          "current_key": "AIzaSyA6YWTNYpgJ4Tt2NydXWDDUzK2-BguQ6ik"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "928565337154-iftre65neet97b497hdc5tvt08un8ed3.apps.googleusercontent.com",
+              "client_id": "678729044194-ovqm0o764ki1ms27oroc668phj4cgtee.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
