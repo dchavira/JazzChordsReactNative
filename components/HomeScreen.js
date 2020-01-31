@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, Alert } from 'react-native';
+import { Platform, StyleSheet, Text, View, Button, Alert, TextInput } from 'react-native';
 import * as firebase from 'firebase';
 import Landing from "./landing";
 
@@ -28,6 +28,15 @@ export default class HomeScreen extends Component {
           <View styles={styles.topHalf}>
             <Icon name='bars' size={50} color='#FFF' style={styles.menu} />
             <Text style={styles.landing}>Welcome</Text>
+            <View style={styles.bar}>
+              <Icon name='search' size={30} color='#FFF' style={styles.search} />
+              <TextInput
+                style={styles.input}
+                placeholder={'Enter a chord'}
+                placeholderTextColor='#FFF'>
+
+              </TextInput></View>
+
           </View>
         </LinearGradient>
 
@@ -38,16 +47,36 @@ export default class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
-  
+  search:{
+    marginLeft:20,
+    marginTop:15
+  },
+  input:{
+    flex:1,
+    paddingLeft:20,
+    color: '#FFF',
+    fontSize: 20,
+  },
+  bar: {
+    borderColor: '#777',
+    borderRadius: 30,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    marginRight: 20,
+    marginLeft:20,
+    marginTop:100,
+    height: 60,
+    flexDirection:'row',
+    
+  },
   menu: {
     marginLeft: 30,
-    marginTop: 30,
+    marginTop: 50,
   },
   gradient: {
     flex: 1,
-    alignItems: 'flex-start',
+    alignItems: 'stretch',
 
   },
   landing: {
@@ -55,7 +84,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'sans-serif',
     fontSize: 50,
-    marginLeft:80,
+    marginLeft: 80,
     marginTop: 120
   }
 });
