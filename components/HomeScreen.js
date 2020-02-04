@@ -20,8 +20,7 @@ export default class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        {//<Text style={styles.instructions}>{scale}</Text>
-        }
+
         <LinearGradient
           colors={['#5AA7FF', '#0044B9']}
           style={styles.gradient}>
@@ -35,7 +34,8 @@ export default class HomeScreen extends Component {
                 placeholder={'Enter a chord'}
                 placeholderTextColor='#FFF'>
 
-              </TextInput></View>
+              </TextInput>
+            </View>
 
           </View>
         </LinearGradient>
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  search:{
-    marginLeft:20,
-    marginTop:15
+  search: {
+    marginLeft: 20,
+    marginTop: 15
   },
-  input:{
-    flex:1,
-    paddingLeft:20,
+  input: {
+    flex: 1,
+    paddingLeft: 20,
     color: '#FFF',
     fontSize: 20,
   },
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
     marginRight: 20,
-    marginLeft:20,
-    marginTop:100,
+    marginLeft: 20,
+    marginTop: 100,
     height: 60,
-    flexDirection:'row',
-    
+    flexDirection: 'row',
+
   },
   menu: {
     marginLeft: 30,
