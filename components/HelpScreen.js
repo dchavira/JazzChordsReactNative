@@ -67,7 +67,10 @@ const styles = StyleSheet.create({
       color: '#FFF',
       fontSize: 30,
       paddingLeft:20,
-      fontFamily:'ralewayLight'
+      fontFamily:'ralewayLight',
+      marginRight:20,
+      overflow:"hidden",
+      textDecorationLine: 'underline'
     },
     input: {
       flex: 1,

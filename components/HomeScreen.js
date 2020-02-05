@@ -16,11 +16,15 @@ export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {text: ''};
-  }
+  };
+  state={
+    fontLoaded:false
+  };
   async componentDidMount() {
     await Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
+    this.setState({fontLoaded:true})
   }
   
   render() {
@@ -28,6 +32,7 @@ export default class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
+        {this.state.fontLoaded ? (
         <LinearGradient
           colors={['#5AA7FF', '#0044B9']}
           style={styles.gradient}>
@@ -62,6 +67,7 @@ export default class HomeScreen extends Component {
             }} />
             <Text style={styles.databaseLabel}>Chords</Text>
         </LinearGradient>
+        ) : null}
 
       </View>
     );
