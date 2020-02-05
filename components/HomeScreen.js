@@ -17,8 +17,8 @@ export default class HomeScreen extends Component {
     super(props);
     this.state = {text: ''};
   }
-  componentDidMount() {
-    Font.loadAsync({
+  async componentDidMount() {
+    await Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
   }
@@ -54,7 +54,7 @@ export default class HomeScreen extends Component {
           <View styles={styles.bottomHalf}>
           </View>
             <Icon name='question-circle' size={50} color='#FFF' style={styles.help} onPress={() => {
-                navigate('Home');
+                navigate('Help');
             }} />
             <Text style={styles.iconLabel}>Help</Text>
             <Icon name='database' size={50} color='#FFF' style={styles.database} onPress={() => {
