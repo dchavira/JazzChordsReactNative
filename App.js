@@ -5,7 +5,8 @@ import ChordScreen from './components/ChordScreen';
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen,
         header:null},
-  Chord: {screen: ChordScreen,header:null},
+  Chord: {screen: ChordScreen,
+        header:null},
 });
 
 const App = createAppContainer(MainNavigator);
