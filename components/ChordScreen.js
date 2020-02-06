@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import * as Font from 'expo-font';
+import * as firebase from 'firebase';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
+import firbaseConfig from '../ApiKeys';
+import firebaseFunctions from '../functionLibrary/firebaseFunctions';
 import { Platform, StyleSheet, Text, View, Button, Alert, TextInput } from 'react-native';
 export default class ChordScreen extends React.Component {
     static navigationOptions = {
         title: 'Chords',
-        
-    headerShown: false,
+        chord:'',
+        headerShown: false,
     };
     componentDidMount() {
         Font.loadAsync({
           'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
         });
+        var scales=firebaseFunctions.request(this.props.navigation.state.params.text);
+        alert(scales)
       }
     render() {
         const { navigate } = this.props.navigation;

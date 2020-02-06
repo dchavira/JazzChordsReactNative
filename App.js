@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import HomeScreen from './components/HomeScreen';
 import ChordScreen from './components/ChordScreen';
 import HelpScreen from './components/HelpScreen';
+import {YellowBox} from 'react-native'
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen,
         header:null},
@@ -12,6 +13,7 @@ const MainNavigator = createStackNavigator({
         header:null}
 });
 
+YellowBox.ignoreWarnings(['Setting a timer']);
 const App = createAppContainer(MainNavigator);
 
 export default App;

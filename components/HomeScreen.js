@@ -5,7 +5,8 @@ import Landing from "./landing";
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Font from 'expo-font';
-
+import firbaseConfig from '../ApiKeys';
+import firebaseConfig from '../ApiKeys';
 
 
 export default class HomeScreen extends Component {
@@ -16,7 +17,11 @@ export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {text: ''};
+    if (!firebase.apps.length){
+      firebase.initializeApp(firebaseConfig);
+    }
   };
+  
   state={
     fontLoaded:false
   };
@@ -25,10 +30,13 @@ export default class HomeScreen extends Component {
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
     this.setState({fontLoaded:true})
+    
+    
+    
   }
   
   render() {
-
+    
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
@@ -53,6 +61,7 @@ export default class HomeScreen extends Component {
                 }}
                 value={this.state.text}>
               </TextInput>
+              
             </View>
 
           </View>
