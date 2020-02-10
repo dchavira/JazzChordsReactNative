@@ -3,6 +3,7 @@ const fbFunctions = {
     request(input) {
         var splitInput = input.toUpperCase().split(" ")
         var root = splitInput[0]
+        var scales=[]
         var maj =['Major','MAJOR','MAJ','Maj','M']
         if (splitInput.length > 2) {
             var quality = splitInput[1]
@@ -15,26 +16,27 @@ const fbFunctions = {
         var db = firebase.database();
         var roots = db.ref().child('Roots');
         try {
-            roots.child(root).once('value',function(snap){
+            roots.child(root).on('value',function(snap){
                 var rootData=snap.val()
                 //Check if user searched a major chord and check what extension they want.
                 if (maj.includes(quality)){
                     var rootQuality=rootData.Major
                     if (extension==='7'){
                         //alert(rootQuality.seven)
-                        var scales=[]
-                        snap.child('Major').child('seven').forEach(function(snapshot){
-                            scales.push(snapshot.key)
-                        })
                         
-                        return scales;
+                        snap.child('Major').child('seven').forEach(function(snapshot){
+                            scales.push(snapshot.val())
+                        })
+                       
+                        
                     }
                 }
             })
         }
         catch (e) {
-            alert('not fdound')
+            return ['lol']
         }
+        return scales;
     }
 }
 
