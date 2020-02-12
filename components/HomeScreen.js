@@ -61,7 +61,9 @@ export default class HomeScreen extends Component {
                 }}
                 value={this.state.text}>
               </TextInput>
-              
+              <Icon name='arrow-circle-right' size={30} color='#FFF' style={styles.send} onPress={()=>{
+                  navigate('Chord',{text: this.state.text})
+                }}/>
             </View>
 
           </View>
@@ -91,6 +93,10 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:"flex-end",
    
+  },
+  send:{
+    marginRight:20,
+    marginTop: 15
   },
   iconLabel:{
     color:'#FFF',

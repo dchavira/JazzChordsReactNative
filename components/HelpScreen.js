@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import * as Font from 'expo-font';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Platform, StyleSheet, Text, View, Button, Alert, TextInput } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
-import helpers from './helpFunctions';
+import { Platform, StyleSheet, Text, View, Button, TextInput } from 'react-native';
 export default class ChordScreen extends React.Component {
     static navigationOptions = {
         title: 'Help',
@@ -18,21 +16,7 @@ export default class ChordScreen extends React.Component {
       }
     render() {
         const { navigate } = this.props.navigation;
-        const DATA=[
-            {
-                index: 1,
-                key: 'How to Search',
-                
-            },
-            {
-                index: 2,
-                key: 'How to Add a Chord'
-            },
-            {
-                index: 3,
-                key: 'How to Update Chord Library'
-            },
-        ]
+        
         return (
             <View style={styles.container}>
 
@@ -43,10 +27,12 @@ export default class ChordScreen extends React.Component {
                         <Icon name='chevron-left' size={50} color='#FFF' style={styles.menu} onPress={() => {
                             navigate('Home');
                         }} />
-                        <Text style={styles.landing}>Help</Text>
-                        <FlatList data={DATA}
-                    renderItem={({item})=> <Text style={styles.list} onPress={()=>{helpers.determiner(item.index)}}>{item.index}. {item.key}</Text>}
-                    ></FlatList>
+                        <Text style={styles.landing} >Help</Text>
+                        <Text style={styles.list}onPress={() => {
+                            navigate('SearchTutorial');
+                        }}>1. How to Search</Text>
+                        <Text style={styles.list}>2. How to Add a Chord</Text>
+                        <Text style={styles.list}>3. How to Update Chord Library</Text>
                         
 
                     </View>

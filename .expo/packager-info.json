@@ -1,9 +1,8 @@
 {
-  "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 17156,
+  "packagerPid": 24052,
   "expoServerNgrokUrl": "https://3v-ebi.anonymous.jazzchordsreactnative.exp.direct",
   "packagerNgrokUrl": "https://packager.3v-ebi.anonymous.jazzchordsreactnative.exp.direct",
-  "ngrokPid": 16200
+  "ngrokPid": 5240
 }
