@@ -12,6 +12,10 @@
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "android": {
+      "package": "com.dcsoftware.jazzchords",
+      "versionCode": 1
+    }
   }
 }

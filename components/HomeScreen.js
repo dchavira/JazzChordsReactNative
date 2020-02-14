@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, Alert, TextInput,StatusBar } from 'react-native';
+import {  StyleSheet, Text, View, TextInput } from 'react-native';
 import * as firebase from 'firebase';
-import Landing from "./landing";
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Font from 'expo-font';
-import firbaseConfig from '../ApiKeys';
 import firebaseConfig from '../ApiKeys';
 
 
@@ -56,6 +54,7 @@ export default class HomeScreen extends Component {
                 placeholder={'Enter a chord'}
                 placeholderTextColor='#FFF'
                 onChangeText={text => this.setState({text})}
+                autoCorrect={false}
                 onSubmitEditing={()=>{
                   navigate('Chord',{text: this.state.text})
                 }}

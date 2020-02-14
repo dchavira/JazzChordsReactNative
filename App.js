@@ -4,6 +4,7 @@ import HomeScreen from './components/HomeScreen';
 import ChordScreen from './components/ChordScreen';
 import HelpScreen from './components/HelpScreen';
 import SearchTutorialScreen from './components/SearchTutorialScreen';
+import ScaleScreen from './components/ScaleScreen';
 import { YellowBox } from 'react-native'
 const MainNavigator = createStackNavigator({
       Home: {
@@ -16,6 +17,10 @@ const MainNavigator = createStackNavigator({
       },
       Chord: {
             screen: ChordScreen,
+            header: null
+      },
+      Scale: {
+            screen: ScaleScreen,
             header: null
       },
       Help: {

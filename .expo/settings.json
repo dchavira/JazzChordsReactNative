@@ -1,8 +1,8 @@
 {
-  "urlRandomness": "3v-ebi",
   "hostType": "lan",
   "lanType": "ip",
   "dev": true,
   "minify": false,
+  "urlRandomness": "f3-gmx",
   "https": false
 }

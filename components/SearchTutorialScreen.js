@@ -25,8 +25,9 @@ export default class ChordScreen extends React.Component {
                 <Icon name='chevron-left' size={50} color='#000' style={styles.menu} onPress={() => {
                     navigate('Help');
                 }} />
-                <Text style={styles.landing}>Search</Text>
+                
                 <ScrollView style={{marginBottom:20}}>
+                    <Text style={styles.landing}>Search</Text>
                     <Text style={styles.instructions}>So you have the app, now you want to learn something.
                     Great!</Text>
                     <Text style={styles.instructions}>To search, all you have to do is press the search bar in the home screen,
@@ -35,7 +36,7 @@ export default class ChordScreen extends React.Component {
                     <Text style={styles.instructions}>There are some format limitations on how you can search these chords however,
                     for example:
                     to search AMaj7, you can type in these formats</Text>
-                    <Text style={styles.instructions}> (AMaj7, AMAJ7, A MAJ 7, AMAJ7, AM7, A Major 7)</Text>
+                    <Text style={styles.instructions}> (AMaj7, AMAJ7, A MAJ 7, A Major 7)</Text>
                     <Text style={styles.instructions}>If for some reason, you still can't find a chord, there is a good chance that the chord
                     you have searched isn't in our database yet. You can send a request to have your chord added to the database here.</Text>
                 </ScrollView>
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         paddingLeft: 20,
         fontFamily: 'ralewayLight',
-        marginRight: 20,
+        marginRight: 30,
         overflow: "hidden",
     },
     input: {
