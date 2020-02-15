@@ -66,7 +66,7 @@ const fbFunctions = {
             roots.child(root).on('value',function(snap){
                 
                 var rootData=snap.val()
-                
+                //alert(extension)
                 //Check if user searched a major chord and check what extension they want.
                 if (maj.includes(quality)){
                     if (extension==='7'){
@@ -107,9 +107,9 @@ const fbFunctions = {
                         }) 
                           
                     }
-                    if (extension==='7#11'){
+                    if (extension==='7#5'){
                         
-                        snap.child('Dominant').child('sevenSharpEleven').forEach(function(snapshot){
+                        snap.child('Dominant').child('sevenSharpFive').forEach(function(snapshot){
                             
                             scales.push(snapshot.key)
                         }) 
@@ -118,6 +118,31 @@ const fbFunctions = {
                     if (extension==='7#9'){
                         
                         snap.child('Dominant').child('sevenSharpNine').forEach(function(snapshot){
+                            
+                            scales.push(snapshot.key)
+                        }) 
+                          
+                    }
+                    if (extension==='7#11'){
+                        
+                        snap.child('Dominant').child('sevenSharpEleven').forEach(function(snapshot){
+                            
+                            scales.push(snapshot.key)
+                        }) 
+                          
+                    }
+                    if (extension==='7B9'){
+                        
+                        snap.child('Dominant').child('sevenFlatNine').forEach(function(snapshot){
+                            
+                            scales.push(snapshot.key)
+                        }) 
+                          
+                    }
+                    
+                    if (extension==='7B13'){
+                        
+                        snap.child('Dominant').child('sevenFlatThirteen').forEach(function(snapshot){
                             
                             scales.push(snapshot.key)
                         }) 

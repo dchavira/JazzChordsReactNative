@@ -1,8 +1,10 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 20288,
+  "expoServerNgrokUrl": "https://f3-gmx.dchavira.jazzchordsreactnative.exp.direct",
+  "packagerNgrokUrl": "https://packager.f3-gmx.dchavira.jazzchordsreactnative.exp.direct",
+  "ngrokPid": 13292,
+  "devToolsPort": 19002,
+  "webpackServerPort": 19006
 }

@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   bottomHalf:{
     flex:1,
-    justifyContent:"flex-end",
+    justifyContent: 'center'
    
   },
   send:{

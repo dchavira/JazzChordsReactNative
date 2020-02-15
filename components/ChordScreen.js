@@ -54,6 +54,7 @@ export default class ChordScreen extends React.Component {
             }} />
             <Text style={styles.landing}>{this.props.navigation.state.params.text}</Text>
             <Text style={styles.landing}>Chord Image will go here</Text>
+            <StaffSheet/>
               <FlatList
                 data={this.scales}
                 renderItem={({ item }) => <Text style={styles.list} onPress={()=>{
