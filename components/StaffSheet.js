@@ -7,9 +7,9 @@ export default class StaffSheet extends React.Component {
     
     render() {
         const context = new ReactNativeSVGContext(NotoFontPack, { width: 400, height: 400 });
-        const stave = new Stave(100, 150, 200);
+        const stave = new Stave(100, 150, 400);
         stave.setContext(context);
-        stave.setClef('treble');
+        stave.setClef('bass');
         stave.setTimeSignature('4/4');
         stave.draw();
     

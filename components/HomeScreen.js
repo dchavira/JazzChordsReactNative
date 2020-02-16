@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import * as firebase from 'firebase';
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -14,38 +14,37 @@ export default class HomeScreen extends Component {
   };
   constructor(props) {
     super(props);
-    this.state = {text: ''};
-    if (!firebase.apps.length){
+    this.state = { text: '' };
+    if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
     }
   };
-  
-  state={
-    fontLoaded:false
+
+  state = {
+    fontLoaded: false
   };
   async componentDidMount() {
     await Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
-    this.setState({fontLoaded:true})
-    
-    
-    
+    this.setState({ fontLoaded: true })
+
+
+
   }
-  
+
   render() {
-    
+
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         {this.state.fontLoaded ? (
-        <LinearGradient
-          colors={['#5AA7FF', '#0044B9']}
-          style={styles.gradient}>
-          <View styles={styles.topHalf}>
-            <Icon name='bars' size={50} color='#FFF' style={styles.menu} onPress={()=>{
+          <LinearGradient
+            colors={['#5AA7FF', '#0044B9']}
+            style={styles.gradient}>
+            <Icon name='bars' size={50} color='#FFF' style={styles.menu} onPress={() => {
               alert('menu');
-            }}/>
+            }} />
             <Text style={styles.landing}>Welcome</Text>
             <View style={styles.bar}>
               <Icon name='search' size={30} color='#FFF' style={styles.search} />
@@ -53,30 +52,31 @@ export default class HomeScreen extends Component {
                 style={styles.input}
                 placeholder={'Enter a chord'}
                 placeholderTextColor='#FFF'
-                onChangeText={text => this.setState({text})}
+                onChangeText={text => this.setState({ text })}
                 autoCorrect={false}
-                onSubmitEditing={()=>{
-                  navigate('Chord',{text: this.state.text})
+                onSubmitEditing={() => {
+                  navigate('Chord', { text: this.state.text })
                 }}
                 value={this.state.text}>
               </TextInput>
-              <Icon name='arrow-circle-right' size={30} color='#FFF' style={styles.send} onPress={()=>{
-                  navigate('Chord',{text: this.state.text})
-                }}/>
+              <Icon name='arrow-circle-right' size={30} color='#FFF' style={styles.send} onPress={() => {
+                navigate('Chord', { text: this.state.text })
+              }} />
+            </View>
+            <View style={styles.bottomHalf}>
+              <View style={{marginRight:50}}><Icon name='question-circle' size={50} color='#FFF' onPress={() => {
+                navigate('Help');
+              }} />
+                <Text style={styles.label} >Help</Text>
+              </View>
+              <View><Icon name='database' size={50} color='#FFF' onPress={() => {
+                navigate('Home');
+              }} />
+                <Text style={styles.label}>Chords</Text>
+              </View>
             </View>
 
-          </View>
-          <View styles={styles.bottomHalf}>
-          </View>
-            <Icon name='question-circle' size={50} color='#FFF' style={styles.help} onPress={() => {
-                navigate('Help');
-            }} />
-            <Text style={styles.iconLabel}>Help</Text>
-            <Icon name='database' size={50} color='#FFF' style={styles.database} onPress={() => {
-                navigate('Home');
-            }} />
-            <Text style={styles.databaseLabel}>Chords</Text>
-        </LinearGradient>
+          </LinearGradient>
         ) : null}
 
       </View>
@@ -84,42 +84,40 @@ export default class HomeScreen extends Component {
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  bottomHalf:{
-    flex:1,
-    justifyContent: 'center'
-   
+  bottomHalf: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+
   },
-  send:{
-    marginRight:20,
+  send: {
+    marginRight: 20,
     marginTop: 15
   },
-  iconLabel:{
-    color:'#FFF',
-    position:"absolute",
-    left:130,
-    bottom:60
+
+  help: {
+    position: "absolute",
+    bottom: 80,
+    left: 125,
+
   },
-  help:{ 
-    position:"absolute",
-    bottom:80,
-    left:125,
-    
+  label: {
+    color: '#FFF',
+    marginTop:5
+
   },
-  databaseLabel:{
-    color:'#FFF',
-    position:"absolute",
-    left:245,
-    bottom:60
-  },
-  database:{
-    position:"absolute",
-    bottom:80,
-    left:250,
-    
+  database: {
+    position: "absolute",
+    bottom: 80,
+    left: 250,
+
   },
   search: {
     marginLeft: 20,
@@ -156,7 +154,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'ralewayLight',
     fontSize: 50,
-    textAlign:'center',
+    textAlign: 'center',
     marginTop: 120
   }
 });
