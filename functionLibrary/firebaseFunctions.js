@@ -177,6 +177,23 @@ const fbFunctions = {
             
         }
         return scales;
+    },
+    scaleInfo(params){
+        var db = firebase.database();
+        var info=[];
+        var scales = db.ref().child('Scales');
+        try {
+            scales.child(params).on('value',function(snap){
+                snap.forEach(function(snapshot){
+                    info.push(snapshot.val())
+                })
+            })
+           // alert(info[0])
+        }
+        catch (e) {
+                alert('nah')
+            }
+        return info;
     }
 }
 

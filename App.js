@@ -6,6 +6,7 @@ import HelpScreen from './components/HelpScreen';
 import SearchTutorialScreen from './components/SearchTutorialScreen';
 import ScaleScreen from './components/ScaleScreen';
 import { YellowBox } from 'react-native'
+import AddChord from './components/AddChord';
 const MainNavigator = createStackNavigator({
       Home: {
             screen: HomeScreen,
@@ -26,8 +27,15 @@ const MainNavigator = createStackNavigator({
       Help: {
             screen: HelpScreen,
             header: null
+      },
+      Add: {
+            screen: AddChord,
+            header: null
       }
-});
+      },{
+            mode:'modal'
+      }
+      );
 
 YellowBox.ignoreWarnings(['Setting a timer']);
 const App = createAppContainer(MainNavigator);

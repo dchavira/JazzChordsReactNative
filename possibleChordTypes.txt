@@ -17,3 +17,17 @@ Dominant:
     A7b9#11b13
     A7#9b13
     A7b9#9#11b13
+Minor:
+    Am7
+    A-7
+    Amin7
+
+    Am9
+    A-9
+    Amin9
+
+    Am11
+    A-11
+    Am11
+
+    A

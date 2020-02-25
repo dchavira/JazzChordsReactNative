@@ -1,33 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as Font from 'expo-font';
-import * as firebase from 'firebase';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
 import firbaseConfig from '../ApiKeys';
 import StaffSheet from './StaffSheet';
 import firebaseFunctions from '../functionLibrary/firebaseFunctions';
-import { Platform, StyleSheet, Text, View, ScrollView, Alert, TextInput, Dimensions } from 'react-native';
+import { StyleSheet, Text, View,  Dimensions } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 const {height}=Dimensions.get('window');
-export default class ChordScreen extends React.Component {
+export default class AddChord extends React.Component {
   static navigationOptions = {
-    title: 'Chords',
+    title: 'Add',
     chord: '',
     headerShown: false,
   };
   state = {
-    scales: [],
-    text: '',
+    scale: '',
+    chord:'',
     screenHeight:0
   }
   componentDidMount() {
     Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
-    this.setState(this.scales = firebaseFunctions.request(this.props.navigation.state.params.text));
-    if(this.scales.length===0){
-      //alert('Sorry, the chord you have entered was not found. Please check your spelling and format.');
-      this.props.navigation.navigate('Home')}
+    
   }
   
   
@@ -40,28 +36,20 @@ export default class ChordScreen extends React.Component {
   };
   render() {
     const { navigate } = this.props.navigation;
-    
     const scrollEnabled = this.state.screenHeight > height;
     return (
       <View style={styles.container}>
 
         <LinearGradient
-          colors={['#FF00DF', '#6E00FF']}
+          colors={['#09DEEE', '#004CFF']}
           style={styles.gradient}>
           
             <Icon name='chevron-left' size={50} color='#FFF' style={styles.menu} onPress={() => {
+              //navigate('Chord',this.props.navigation.state.params.chord);
               this.props.navigation.goBack();
             }} />
-            <Text style={styles.landing}>{this.props.navigation.state.params.text}</Text>
-            <Text style={styles.landing}>Chord Image will go here</Text>
-            
-              <FlatList
-                data={this.scales}
-                renderItem={({ item }) => <Text style={styles.list} onPress={()=>{
-                  navigate('Scale',{scale: item,chord:this.props.navigation.state.params.text})
-                  
-                }}>{item}</Text>}
-              />
+            <Text style={styles.landing}>hi</Text>
+              
 
         </LinearGradient>
 
@@ -123,6 +111,6 @@ const styles = StyleSheet.create({
     fontFamily: 'ralewayLight',
     fontSize: 50,
     textAlign: 'center',
-    marginTop: 40
+    marginTop: 40,
   }
 });

@@ -15,14 +15,17 @@ export default class ScaleScreen extends React.Component {
     headerShown: false,
   };
   state = {
-    scale: '',
+    scaleInfo: [],
     chord:'',
-    screenHeight:0
+    screenHeight:0,
+
   }
   componentDidMount() {
     Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
+    
+    this.setState(this.scaleInfo = firebaseFunctions.scaleInfo(this.props.navigation.state.params.scale));
     
   }
   
@@ -50,6 +53,11 @@ export default class ScaleScreen extends React.Component {
             }} />
             <Text style={styles.landing}>{this.props.navigation.state.params.scale}</Text>
             <Text style={styles.landing}>Scale Image will go here</Text>
+            
+            <FlatList
+                data={this.scaleInfo}
+                renderItem={({ item }) => <Text style={styles.list}>{item}</Text>}
+              />
               
 
         </LinearGradient>

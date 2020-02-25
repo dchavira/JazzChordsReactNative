@@ -5,6 +5,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Font from 'expo-font';
 import firebaseConfig from '../ApiKeys';
+import { DrawerNavigator } from 'react-navigation';
+import AddChord from './AddChord';
 
 
 export default class HomeScreen extends Component {
@@ -43,7 +45,7 @@ export default class HomeScreen extends Component {
             colors={['#5AA7FF', '#0044B9']}
             style={styles.gradient}>
             <Icon name='bars' size={50} color='#FFF' style={styles.menu} onPress={() => {
-              alert('menu');
+              alert('menu')
             }} />
             <Text style={styles.landing}>Welcome</Text>
             <View style={styles.bar}>
@@ -64,7 +66,7 @@ export default class HomeScreen extends Component {
               }} />
             </View>
             <View style={styles.bottomHalf}>
-              <View style={{marginRight:50}}><Icon name='question-circle' size={50} color='#FFF' onPress={() => {
+              <View style={{ marginRight: 50 }}><Icon name='question-circle' size={50} color='#FFF' onPress={() => {
                 navigate('Help');
               }} />
                 <Text style={styles.label} >Help</Text>
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    
+
 
   },
   send: {
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: '#FFF',
-    marginTop:5
+    marginTop: 5
 
   },
   database: {
