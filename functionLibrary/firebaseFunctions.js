@@ -5,6 +5,7 @@ const fbFunctions = {
         var scales=[]
         var maj =['Major','MAJOR','MAJ','Maj']
         var dom=['Dominant','DOMINANT','DOM']
+        var sus=['sus','SUS','s','S']
         var min=['Minor','MINOR','MIN','-','M']
         
         //If Format is A MAJ 7 (correctly split)
@@ -35,6 +36,7 @@ const fbFunctions = {
             var quality = 'Dominant'
             var extension = splitInput[0].slice('1')
             
+            
         }
         //If format is A-7
         else if(splitInput.length===1&&(splitInput[0][1]==="-")){
@@ -45,11 +47,12 @@ const fbFunctions = {
             
         }
         //If format is Am7
-        else if(splitInput.length===1&&(splitInput[0][1]==="M"&&splitInput[0][2]===null)){
+        else if(splitInput.length===1&&(splitInput[0][1]==="M"&&splitInput[0][2]!=="I")){
             var correctedInput=[splitInput[0][0],splitInput[0][1],splitInput[0][2]]
             var root = correctedInput[0]
             var quality = 'Minor'
             var extension = correctedInput[2]
+            
             
         }
         //If format is AMIN7 (one long string)
@@ -58,16 +61,16 @@ const fbFunctions = {
             var root = correctedInput[0]
             var quality = 'Minor'
             var extension = splitInput[0].slice('4')
+            
         }
-        
         var db = firebase.database();
         var roots = db.ref().child('Roots');
         try {
             roots.child(root).on('value',function(snap){
                 
-                var rootData=snap.val()
                 //alert(extension)
                 //Check if user searched a major chord and check what extension they want.
+                
                 if (maj.includes(quality)){
                     if (extension==='7'){
                         
@@ -88,7 +91,20 @@ const fbFunctions = {
                         })      
                     }
                 }
-                
+                else if (sus.includes(quality)){
+                    if (extension==='7'){
+                        
+                        snap.child('Suspended').child('seven').forEach(function(snapshot){
+                            scales.push(snapshot.key)
+                        })      
+                    }
+                    if (extension==='4'){
+                        
+                        snap.child('Suspended').child('four').forEach(function(snapshot){
+                            scales.push(snapshot.key)
+                        })      
+                    }
+                }
                 else if (dom.includes(quality)){
                     
                     if (extension==='7'){
@@ -102,6 +118,22 @@ const fbFunctions = {
                     if (extension==='9'){
                         
                         snap.child('Dominant').child('nine').forEach(function(snapshot){
+                            
+                            scales.push(snapshot.key)
+                        }) 
+                          
+                    }
+                    if (extension==='11'){
+                        
+                        snap.child('Dominant').child('eleven').forEach(function(snapshot){
+                            
+                            scales.push(snapshot.key)
+                        }) 
+                          
+                    }
+                    if (extension==='13'){
+                        
+                        snap.child('Dominant').child('thirteen').forEach(function(snapshot){
                             
                             scales.push(snapshot.key)
                         }) 
@@ -123,6 +155,7 @@ const fbFunctions = {
                         }) 
                           
                     }
+                    
                     if (extension==='7#11'){
                         
                         snap.child('Dominant').child('sevenSharpEleven').forEach(function(snapshot){

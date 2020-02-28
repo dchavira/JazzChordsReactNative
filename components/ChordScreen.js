@@ -23,10 +23,11 @@ export default class ChordScreen extends React.Component {
   componentDidMount() {
     Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
+      
     });
     this.setState(this.scales = firebaseFunctions.request(this.props.navigation.state.params.text));
     if(this.scales.length===0){
-      //alert('Sorry, the chord you have entered was not found. Please check your spelling and format.');
+      Alert.alert('Not Found','Sorry, the chord you have entered was not found. Please check your spelling and format.');
       this.props.navigation.navigate('Home')}
   }
   

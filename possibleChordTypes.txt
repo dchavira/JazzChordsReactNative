@@ -28,6 +28,6 @@ Minor:
 
     Am11
     A-11
-    Am11
+    Amin11
 
     A

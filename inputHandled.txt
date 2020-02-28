@@ -1,0 +1,17 @@
+This is just a file to store what kind of input 
+I have handled already.
+
+AMaj7
+AMaj7#11
+AMaj7#5
+
+A7
+A9
+A7#5
+A7#9
+A7#11
+A7b9
+A7b13
+
+A-7
+A-9
