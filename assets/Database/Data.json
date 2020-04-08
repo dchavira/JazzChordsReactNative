@@ -1,0 +1,167 @@
+{   "version":"0.0.1",
+    "Roots" : {
+      "A" : {
+        "Dominant" : {
+          "eleven" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Mixolydian" : "ABC#DEF#GA",
+            "A Pentatonic" : "ABC#EF#A",
+            "A Pentatonic Sharp 6" : "ABC#EGA",
+            "A Phrygian" : "ABbCDEFGA",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "B Pentatonic b6" : "BC#D#F#GA",
+            "F Sharp Pentatonic b2" : "F#GA#C#D#F#"
+          },
+          "nine" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Bebop" : "ABC#DEF#GG#A",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Lydian Dominant" : "ABC#D#EF#GA",
+            "A Mixolydian" : "ABC#DEF#GA",
+            "A Pentatonic" : "ABC#EF#A",
+            "A Pentatonic Sharp 6" : "ABC#EGA",
+            "A Phrygian Dominant" : "ABbC#DEFG",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "B Pentatonic b6" : "BC#D#F#GA",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "seven" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Bebop" : "ABC#DEF#GG#A",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Lydian Dominant" : "ABC#D#EF#GA",
+            "A Mixolydian" : "ABC#DEF#GA",
+            "A Pentatonic" : "ABC#EF#A",
+            "A Pentatonic Sharp 6" : "ABC#EGA",
+            "A Phrygian Dominant" : "ABbC#DEFGA",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "B Pentatonic b6" : "BC#D#F#GA",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "sevenFlatNine" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Pentatonic b2" : "ABbC#EF#A",
+            "A Pentatonic b2 Sharp 6 " : "ABbC#EGA",
+            "A Phrygian Dominant" : "ABbC#DEFGA",
+            "Bb Pentatonic b3" : "BbCDbFGBb",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "sevenFlatThirteen" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Pentatonic b2 Sharp 6 " : "ABbC#EGA",
+            "A Pentatonic b2b6" : "ABbC#EFA",
+            "A Phrygian Dominant" : "ABbC#DEFGA",
+            "Bb Pentatonic b3" : "BbCDbFGBb",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "sevenSharpEleven" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Lydian Dominant" : "ABC#D#EF#GA",
+            "A Pentatonic" : "ABC#EF#A",
+            "A Pentatonic Sharp 6" : "ABC#EGA",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "B Pentatonic b6" : "BC#D#F#GA",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "sevenSharpFive" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "sevenSharpNine" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Pentatonic b2" : "ABbC#EF#A",
+            "A Pentatonic b2 Sharp 6 " : "ABbC#EGA",
+            "Bb Pentatonic b3" : "BbCDbFGBb",
+            "F Pentatonic b6" : "FGACDbF"
+          },
+          "thirteen" : {
+            "A Altered" : "ABbCC#EbFGA",
+            "A Bebop" : "ABC#DEF#GG#A",
+            "A Half-Whole Diminished Scale" : "ABbCC#EbEF#GA",
+            "A Lydian Dominant" : "ABC#D#EF#GA",
+            "A Mixolydian" : "ABC#DEF#GA",
+            "A Pentatonic" : "ABC#EF#A",
+            "A Pentatonic Sharp 6" : "ABC#EGA",
+            "A Whole Tone" : "ABC#D#E#GA",
+            "B Pentatonic b6" : "BC#D#F#GA",
+            "F Sharp Pentatonic b2" : "F#GA#C#D#F#"
+          }
+        },
+        "Major" : {
+          "seven" : {
+            "A Ionian" : "ABC#DEF#G#A",
+            "A Lydian" : "ABC#D#EF#G#A",
+            "A Lydian Augmented" : "ABC#D#E#F#G#A",
+            "A Pentatonic" : "ABC#EF#A",
+            "B Pentatonic" : "BC#D#F#G#B",
+            "C Sharp Pentatonic b6" : "C#D#E#G#AC#",
+            "E Pentatonic" : "EF#G#B#C#E"
+          },
+          "sevenSharpEleven" : {
+            "A Lydian" : "ABC#D#EF#G#A",
+            "A Lydian Augmented" : "ABC#D#E#F#G#A",
+            "A Pentatonic" : "ABC#EF#A",
+            "B Pentatonic" : "BC#D#F#G#B",
+            "C Sharp Pentatonic b6" : "C#D#E#G#AC#"
+          },
+          "sevenSharpFive" : {
+            "A Lydian Augmented" : "ABC#D#E#F#G#A",
+            "A Pentatonic Sharp 5" : "ABC#E#F#A",
+            "C Sharp Pentatonic b6" : "C#D#E#G#AC#"
+          }
+        },
+        "Minor" : {
+          "nine" : {
+            "A Aeolian" : "ABCDEFGA",
+            "A Blues Scale" : "ACDD#EGA",
+            "A Dorian" : "ABCDEF#GA",
+            "A Jazz Melodic Minor" : "ABCDEF#G#A",
+            "A Phrygian" : "ABbCDEFGA",
+            "D Pentatonic" : "DEF#ABD",
+            "E Pentatonic b6" : "EF#G#BCE",
+            "G Pentatonic" : "GABDEG"
+          },
+          "seven" : {
+            "A Aeolian" : "ABCDEFGA",
+            "A Blues Scale" : "ACDD#EGA",
+            "A Dorian" : "ABCDEF#GA",
+            "A Jazz Melodic Minor" : "ABCDEF#G#A",
+            "A Phrygian" : "ABbCDEFGA",
+            "D Pentatonic" : "DEF#ABD",
+            "E Pentatonic b6" : "EF#G#BCE",
+            "G Pentatonic" : "GABDEG"
+          }
+        },
+        "Suspended" : {
+          "four" : {
+            "A Phrygian" : "ABbCDEFGA",
+            "D Pentatonic" : "DEF#ABD",
+            "G Pentatonic" : "GABDEG"
+          },
+          "seven" : {
+            "A Phrygian" : "ABbCDEFGA",
+            "D Pentatonic" : "DEF#ABD",
+            "G Pentatonic" : "GABDEG"
+          }
+        }
+      }
+    },
+    "Scales" : {
+      "A Altered" : {
+        "Examples" : "A7,A7b9, variants on A7",
+        "Origin" : "Comes from the 7th mode of the Bb Jazz Melodic Minor Scale",
+        "Scale" : "ABbCC#EbFGA"
+      },
+      "A Lydian Dominant" : {
+        "Examples" : "A7#11, A13",
+        "Origin" : "Comes from the 4th mode of the E Jazz Melodic Minor scale",
+        "Scale" : "ABC#D#EF#GA"
+      }
+    }
+  }
+  

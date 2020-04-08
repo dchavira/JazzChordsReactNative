@@ -1,39 +1,39 @@
-import React from 'react';
+import React, { version } from 'react';
 import * as Font from 'expo-font';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
-import firbaseConfig from '../ApiKeys';
-import StaffSheet from './StaffSheet';
-import firebaseFunctions from '../functionLibrary/firebaseFunctions';
+import * as data from '../assets/Database/Data.json'
+
+import updateData from '../functionLibrary/updateData'
 import { StyleSheet, Text, View,  Dimensions } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 const {height}=Dimensions.get('window');
 export default class UpdateLibrary extends React.Component {
   static navigationOptions = {
-    title: 'Add',
+    title: 'UpdateLibrary',
     chord: '',
     headerShown: false,
   };
   state = {
     scale: '',
     chord:'',
-    screenHeight:0
+    screenHeight:0,
+    version:''
   }
   componentDidMount() {
     Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
     });
+    this.getVersion()
     
   }
-  
-  
-  onContentSizeChange = (contentWidth, contentHeight) => {
+  getVersion(){
+      this.setState({version:data.version})
+  }
+  checkUpdate(){
+    updateData.update();
+  }
 
-    // Save the content height in state
-
-    this.setState({ screenHeight: contentHeight });
-
-  };
   render() {
     const { navigate } = this.props.navigation;
     const scrollEnabled = this.state.screenHeight > height;
@@ -45,11 +45,20 @@ export default class UpdateLibrary extends React.Component {
           style={styles.gradient}>
           
             <Icon name='chevron-left' size={50} color='#FFF' style={styles.menu} onPress={() => {
-              //navigate('Chord',this.props.navigation.state.params.chord);
               this.props.navigation.goBack();
             }} />
-            <Text style={styles.landing}>hi</Text>
+            <Text style={styles.landing}>Update</Text>
+            <View style={styles.buttonView}>
+              <Text style={styles.list}>Current Version:</Text>
+              <Text style={{fontSize:30,color:"#FFF",fontFamily:'ralewayLight'}}>{this.state.version}</Text>
               
+                <TouchableOpacity
+                  onPress={()=> this.checkUpdate()}
+                  style={styles.buttons}
+                >
+                  <Text style={styles.buttonText}>Check for Updates</Text>
+                </TouchableOpacity>
+            </View>
 
         </LinearGradient>
 
@@ -61,12 +70,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
+  buttonView:{
+    flex: 1,
+    alignItems: 'center',
+  },
+  buttonText:{
+    fontSize:20,
+    
+    fontFamily:'ralewayLight'
+  },
+  buttons:{
+    borderRadius:7,
+    padding:10,
+    backgroundColor:'#FFF',
+    marginTop:20
+    
+  },
   list: {
     color: '#FFF',
     fontFamily: 'ralewayLight',
     fontSize: 30,
     marginLeft: 30,
-    marginTop: 20,
+    marginTop: 50,
     marginRight: 30,
     padding: 10,
     borderColor: "#000",

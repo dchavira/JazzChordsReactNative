@@ -75,10 +75,10 @@ export default class HomeScreen extends Component {
                 <Text style={styles.label} >Help</Text>
               </View>
               <View><Icon name='database' size={50} color='#FFF' onPress={() => {
-                navigate('Home');
+                navigate('Update');
               }} />
                 <Text style={styles.label} onPress={() => {
-                navigate('Update');
+                
               }}>Chords</Text>
               </View>
             </View>
