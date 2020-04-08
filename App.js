@@ -7,6 +7,8 @@ import SearchTutorialScreen from './components/SearchTutorialScreen';
 import ScaleScreen from './components/ScaleScreen';
 import { YellowBox } from 'react-native'
 import AddChord from './components/AddChord';
+
+import UpdateLibrary from './components/UpdateLibrary';
 const MainNavigator = createStackNavigator({
       Home: {
             screen: HomeScreen,
@@ -31,7 +33,11 @@ const MainNavigator = createStackNavigator({
       Add: {
             screen: AddChord,
             header: null
-      }
+      },
+      Update: {
+            screen: UpdateLibrary,
+            header: null
+      },
       },{
             mode:'modal'
       }

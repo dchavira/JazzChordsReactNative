@@ -7,7 +7,7 @@ import * as Font from 'expo-font';
 import firebaseConfig from '../ApiKeys';
 import { DrawerNavigator } from 'react-navigation';
 import AddChord from './AddChord';
-
+import UpdateLibrary from './UpdateLibrary';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
@@ -28,7 +28,10 @@ export default class HomeScreen extends Component {
   async componentDidMount() {
     await Font.loadAsync({
       'ralewayLight': require('../assets/raleway/Raleway-Light.ttf'),
+      
+      
     });
+    
     this.setState({ fontLoaded: true })
 
 
@@ -74,7 +77,9 @@ export default class HomeScreen extends Component {
               <View><Icon name='database' size={50} color='#FFF' onPress={() => {
                 navigate('Home');
               }} />
-                <Text style={styles.label}>Chords</Text>
+                <Text style={styles.label} onPress={() => {
+                navigate('Update');
+              }}>Chords</Text>
               </View>
             </View>
 
